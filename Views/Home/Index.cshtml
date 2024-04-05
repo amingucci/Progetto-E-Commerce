@@ -1,0 +1,2085 @@
+﻿@model Circuit;
+
+@*@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="~/css/IndexStyle.css" />*@
+
+
+<style>
+    table {
+        width: 50%; /* Imposta la larghezza della tabella al 50% del contenitore genitore */
+        border-collapse: collapse; /* Combinare i bordi delle celle */
+    }
+
+    th, td {
+        border: 1px solid black; /* Aggiungere bordi a celle e intestazioni */
+        padding: 8px; /* Aggiungere spazio interno alle celle */
+        text-align: center; /* Allineare il testo al centro */
+    }
+
+    body{
+        background-image: url('/wallpapers/black-carbon-fiber-in-4k-qrrlbfjhtfqljz4q.jpg');
+    }
+
+</style>
+
+<div id="Container" style="align-items: center">
+    
+@*OSAIL, GP QATAR*@
+<div>
+    <div>
+    <br> <br>
+    <div class="title" style="background-color: rgb(41, 41, 41); text-align: left;" >   @*titolo del circuito*@
+        <h3 style="color: white; ">OSAIL, GP QATAR</h3>
+    </div>
+    <div style="position: relative;">
+        <img src="/circuit/LOSAIL, GP QATAR.jpg" width="1116" height="500" alt="OSAIL, GP QATAR" class="left" > @*preleviamo l'immagine del circuito dalla cartella e le diamo la dimensione*@
+    </div>
+
+    <div class="accordion" id="accordionExample">   @*?*@
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> @*creaiamo il pulsante dettagli*@
+                    Details
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample"> @*?*@
+            <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong> Il circuito di Losail, in Qatar, si trova circa a 30 km dall'aeroporto di Doha e a 20 @*Descrizione del circuito*@
+                        km dal centro della città, è stato costruito in appena un anno, impegnando 1.000 lavoratori e spendendo 58 milioni di dollari.
+                        Inaugurato il 2 ottobre 2004 con il Grand Prix of Qatar, vinto da Sete Gibernau, dal 2007 è tappa di apertura del Motomondiale,
+                        dal 2008 si corre in notturna, grazie a un potente impianto di  illuminazione (consuma energia sufficiente a illuminare un paese
+                        di 3.000 abitazioni) ed è circondato da un ampio prato in erba artificiale che impedisce alla sabbia del deserto di invadere la pista.
+                        Losail è lungo 5.380 metri e conta 16 curve raccordate da  brevi tratti rettilinei e un lungo rettifilo di circa 1 km, al termine del
+                        quale c’è una delle staccate più impegnative di tutto i Motomondiale: i piloti passano da 359 km/h a circa 108 km/h (250 km/h di differenza…)
+                        applicando alla leva una forza di circa 8 kg.
+            </div> <br>
+                <table class="table table-hover">   @*tabella con relativi dati del circuito*@
+                            <tr>
+                                <th scope="row">Nome</th>
+                                <td>Losail International Circuit</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Sede</th>
+                                <td>Doha - Qatar</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipologia</th>
+                                <td>Permanente</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Edizioni disputate</th>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Giri gara</th>
+                                <td>22</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Lunghezza circuito</th>
+                                <td>5,400 km</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Numero curve</th>
+                                <td>16</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Lunghezza gara</th>
+                                <td>118,4 km</td>
+                            </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>  <br>
+<div style="align-items: center; background-color: rgba(57, 57, 57, 0.634); text-align : center; color: white; border-radius: 10px">
+            <div>
+                <h5><strong>Purchase</strong></h5>
+            </div>
+                <div>
+                    <label>Hours:</label>
+                    <br>
+                    <input type="number" placeholder="1">
+
+                    <hr>
+                    <label>People Number:</label>
+                    <br>
+                    <input type="number" placeholder="2">
+                    <hr>
+                    <label>Price:</label>
+                    <p id="price" aria-placeholder="200€"></p>
+                    <button type="button" class="btn btn-success">Choose</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <br>
+<div>
+    <img src="/bikes/Aprilia rs racing.jpg" width="175" height="100" alt="Aprilia rs racing" class="left">                      @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+    <img src="/bikes/BMW M 1000 RR.jpeg" width="175" height="100" alt="BMW M 1000 RR" class="left">                             @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+    <img src="/bikes/Ducati Desmosedici 2024.jpeg" width="175" height="100" alt="Ducati Desmosedici 2024" class="left">         @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+
+    <a href="Moto.cshtml" class="btn btn-outline-info">Bikes</a>
+    <a href="Moto.cshtml" class="btn btn-outline-warning">Choose this Circuit</a>
+    @*<button href="Moto.cshtml" type="button" class="btn btn-outline-info">Bikes</button>*@                                    @*Pulsante Moto*@
+    @*<button href="Moto.cshtml" type="button" class="btn btn-outline-warning">Choose this Circuit</button>*@                   @*Pulsante Circuito*@
+    @*<form method="post" action="Cart.cshtml">
+        <button type="submit" name="circuitName" value="OSAIL, GP QATAR">Choose this circuit</button>
+    </form>*@
+</div>  <br>
+</div>
+<div class="progress">
+  <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>      @*banda rossa divisionale*@
+</div>  <br>
+
+@*PORTIMAO, GP PORTOGALLO*@
+<div>
+    <div class="title" style="background-color: rgb(41, 41, 41); text-align: left;" >   @*titolo del circuito*@
+        <h3 style="color: white; ">PORTIMAO, GP PORTOGALLO</h3>
+    </div>
+    <div style="position: relative;">
+        <img src="/circuit/PORTIMAO, GP PORTOGALLO.jpg" width="1116" height="500" alt="PORTIMAO, GP PORTOGALLO" class="left" >  @*preleviamo l'immagine del circuito dalla cartella e le diamo la dimensione*@
+    </div>
+    <div class="accordion" id="accordionExample">   @*?*@
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">    @*creaiamo il pulsante dettagli*@
+                   Details
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample"> @*?*@
+                <div class="accordion-body">
+                    <strong>descrizione:
+                    inaugurato nell'ottobre 2008 e costato circa 195 milioni euro, ha ospitato la prima competizione ufficiale il 2 novembre 2008,  @*Descrizione del circuito*@
+                    era l'ultima prova del Campionato Mondiale Superbike. La MotoGP, invece, ha debuttato nel 2020. La pista è lunga 4,592 m e ha
+                    15 curve (6 a sinistra, 9 a destra) con un rettilineo di 969 m, il tutto accompagnato da tanti saliscendi che caratterizzano
+                    questo tracciato unico nel suo genere. L'impianto è affiancato da un kartodromo, un parco tecnologico, un albergo a cinque stelle,
+                    un complesso sportivo e diverse abitazioni. Una “cittadella dello sport motoristico” che si estende su una superficie di circa
+                    300 ettari sulle colline intorno alla cittadina portoghese.  
+                </div> <br>
+
+                <table class="table table-hover">   @*tabella con relativi dati del circuito*@
+                            <tr>
+                                <th scope="row">Nome</th>
+                                <td>Autódromo Internacional do Algarve</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Sede</th>
+                                <td>Portimao, Portogall</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipologia</th>
+                                <td>Permanente</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Edizioni disputate</th>
+                                <td>1 (2020)</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Giri gara</th>
+                                <td>25</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Lunghezza circuito</th>
+                                <td>4,592 km</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Numero curve</th>
+                                <td>15</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Lunghezza gara</th>
+                                <td>114,8 km</td>
+                            </tr>
+                        </table>
+            </div>
+        </div>
+    </div>  <br>
+    <div style="align-items: center; background-color: rgba(57, 57, 57, 0.634); text-align : center; color: white; border-radius: 10px">
+            <div>
+                <h5><strong>Purchase</strong></h5>
+            </div>
+                <div>
+                    <label>Hours:</label>
+                    <br>
+                    <input type="number" placeholder="1">
+
+                    <hr>
+                    <label>People Number:</label>
+                    <br>
+                    <input placeholder="2">
+                    <hr>
+                    <label>Price:</label>
+                    <p id="price" aria-placeholder="200€"></p>
+                    <button type="button" class="btn btn-success">Choose</button>
+                    <br>
+                    <br>
+                </div>
+        </div>
+            <br>
+    <div>
+        <img src="/bikes/Ducati Gresini racing.jpg" width="175" height="100" alt="Ducati Gresini racing" class="left">                        @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+        <img src="/bikes/Ducati Pramac.jpeg" width="175" height="100" alt="Ducati Pramac" class="left">      @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+        <img src="/bikesDucati VR46 Racing Team 2024.jpg" width="175" height="100" alt="Ducati VR46 Racing Team 2024" class="left">                               @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+
+        <button type="button" class="btn btn-outline-info">Bikes</button>                                                        @*Pulsante Moto*@
+        <button type="button" class="btn btn-outline-warning">Choose this Circuit</button>                                       @*Pulsante Circuito*@
+    </div> <br>
+</div>
+<div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>    @*banda rossa divisionale*@
+</div> <br>
+
+@*AUSTIN, GP STATI UNITI*@
+<div>
+    <div>
+        <div class="title" style="background-color: rgb(41, 41, 41); text-align: left;" >   @*titolo del circuito*@
+            <h3 style="color: white; ">AUSTIN, GP STATI UNITI</h3>
+        </div>
+        <div style="position: relative;">
+            <img src="/circuit/AUSTIN, GP STATI UNITI.jpg" width="1116" height="500" alt="AUSTIN, GP STATI UNITI" class="left" >  @*preleviamo l'immagine del circuito dalla cartella e le diamo la dimensione*@
+            <div style="position: absolute; top: 75%; left: 34%; transform: translate(-50%, -50%); z-index: 1; background-color: rgba(37, 37, 37, 0.74);" class="description"></div>  
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">    @*creaiamo il pulsante dettagli*@
+                            Details
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Descrizione:
+                            Il Circuito delle Americhe, ad Austin in Texas, fa parte del Motomondiale dal 2013, si tratta di uno dei circuiti più lunghi (5.513 m)  @*Descrizione del circuito*@
+                            e tortuosi (20 curve 9 a destra e 11 a sinistra) del circus. Impressionante la salita di 41 metri  al termine del rettilineo principale
+                            che termina con una delle staccate più violente del circuito, le moto passano da circa 310 km/h a circa 65 km/h in poco più di 200 metri.
+                            Altra staccata molto impegnativa è la curva T12, vi si arriva a circa 340 km/h e bisogna rallentare fino a 75 km/h in 330 metri. Il
+                            circuito, disegnato dal famoso architetto tedesco Hermann Tilke, è stato il primo ad essere costruito appositamente per il mondiale moto
+                            negli Stati Uniti, vi si gira in senso antiorario ed è uno dei più completi e moderni del Motomondiale e può ospitare fino a 120.000 spettatori.  
+                        </div>  <br>
+                        <table class="table table-hover">   @*tabella con relativi dati del circuito*@
+                            <tr>
+                                <th scope="row">Nome</th>
+                                <td>Circuit Of The Americas</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Sede</th>
+                                <td>Austin- Texas (USA)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipologia</th>
+                                <td>Permanente</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Edizioni disputate</th>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Giri gara</th>
+                                <td>20</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Lunghezza circuito</th>
+                                <td>5,500 Km</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Numero curve</th>
+                                <td>20</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Lunghezza gara</th>
+                                <td>115,8 km</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>  <br>
+            <div style="align-items: center; background-color: rgba(57, 57, 57, 0.634); text-align : center; color: white; border-radius: 10px">
+            <div>
+                <h5><strong>Purchase</strong></h5>
+            </div>
+                <div>
+                    <label>Hours:</label>
+                    <br>
+                    <input type="number" placeholder="1">
+
+                    <hr>
+                    <label>People Number:</label>
+                    <br>
+                    <input placeholder="2">
+                    <hr>
+                    <label>Price:</label>
+                    <p id="price" aria-placeholder="200€"></p>
+                    <button type="button" class="btn btn-success">Choose</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <div>
+                <img src="/bikes/Honda rc213v hrc.jpg" width="175" height="100" alt="Honda rc213v hrc" class="left">                        @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@  
+                <img src="/bikes/Honda rc213v motogp lrc.jpeg" width="175" height="100" alt="Honda rc213v motogp lrc" class="left">      @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikes/Honda RC213V racing.jpg" width="175" height="100" alt="Honda RC213V racing" class="left">                               @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+
+                <button type="button" class="btn btn-outline-info">Bikes</button>                                                        @*Pulsante Moto*@
+                <button type="button" class="btn btn-outline-warning">Choose this Circuit</button>                                       @*Pulsante Circuito*@
+            </div>
+        </div> <br>
+    </div>
+</div>
+<div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div> <br>  
+
+@*JEREZ, DP SPAGNA*@
+<div>
+    <div>
+        <div class="title" style="background-color: rgb(41, 41, 41); text-align: left;" >   @*titolo del circuito*@
+            <h3 style="color: white; ">JEREZ, DP SPAGNA</h3>
+        </div>
+        <div style="position: relative;">
+            <img src="/circuit/JEREZ, GP SPAGNA.jpg" width="1116" height="500" alt="JEREZ, DP SPAGNA" class="left" >  @*preleviamo l'immagine del circuito dalla cartella e le diamo la dimensione*@
+            <div style="position: absolute; top: 75%; left: 34%; transform: translate(-50%, -50%); z-index: 1; background-color: rgba(37, 37, 37, 0.74);" class="description"></div>  
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">    @*creaiamo il pulsante dettagli*@
+                            Details
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Descrizione:
+                            Il tracciato di Jerez de la Frontera si trova nella Spagna del sud, in Andalusia, non lontano da Cadice. Costruito nel 1985, ha subito
+                            numerose modifiche fino ad arrivare all’attuale configurazione; è uno dei circuiti più  brevi dell’intero motomondiale: solo 4.423 m,
+                            con 13 curve e due brevi rettilinei. Allo stesso tempo è anche uno dei più lenti, con velocità medie in gara mai superiori a 160 km/h.
+                            In questa pista sono molti i punti favorevoli per i sorpassi, ma i "saltellamenti" dovuti alle ondulazioni dell'asfalto richiedono moto
+                            ben bilanciate e stabili in frenata per “attaccare” nelle curve più veloci. Il tracciato si caratterizza per due staccate molto difficili:
+                            la 1 (si passa da 278 km/h a 105 km/h) e la 6 (da 288 km/h a 87 km/h), caratterizzate da decelerazioni superiori a 1,6 g , tra le più
+                            impegnative del mondiale. L'ultima curva, intitolata a Jorge Lorenzo, è quella che ha visto consumarsi epiche battaglie, due sono
+                            rimaste negli annali: nel 2005 tra Valentino Rossi e Sete Gibernau, più recentemente nel 2013 tra Jorge Lorenzo e Marc Marquez.  
+                        </div>  <br>
+                        <table class="table table-hover">   @*tabella con relativi dati del circuito*@
+                            <tr>
+                                <th scope="row">Nome</th>
+                                <td>Circuito de Jerez</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Sede</th>
+                                <td>Jerez de la Frontera - Spagna</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipologia</th>
+                                <td>Permanente</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Edizioni disputate</th>
+                                <td>23</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Giri gara</th>
+                                <td>25</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Lunghezza circuito</th>
+                                <td>4,400 km</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Numero curve</th>
+                                <td>13</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Lunghezza gara</th>
+                                <td>110,6 km</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>  <br>
+            <div style="align-items: center; background-color: rgba(57, 57, 57, 0.634); text-align : center; color: white; border-radius: 10px">
+            <div>
+                <h5><strong>Purchase</strong></h5>
+            </div>
+                <div>
+                    <label>Hours:</label>
+                    <br>
+                    <input type="number" placeholder="1">
+
+                    <hr>
+                    <label>People Number:</label>
+                    <br>
+                    <input placeholder="2">
+                    <hr>
+                    <label>Price:</label>
+                    <p id="price" aria-placeholder="200€"></p>
+                    <button type="button" class="btn btn-success">Choose</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <div>
+                <img src="/bikes/Kawasaki Ninja zx10r.jpg" width="175" height="100" alt="Kawasaki Ninja zx10r" class="left">                        @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@  
+                <img src="/bikes/kawasaki xr10r.jpeg" width="175" height="100" alt="kawasaki xr10r" class="left">      @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikes/KTM-RC16.jpg" width="175" height="100" alt="KTM-RC16" class="left">                               @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+
+                <button type="button" class="btn btn-outline-info">Bikes</button>                                                        @*Pulsante Moto*@
+                <button type="button" class="btn btn-outline-warning">Choose this Circuit</button>                                       @*Pulsante Circuito*@
+            </div>
+        </div> <br>
+    </div>
+</div>
+<div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div> <br>
+
+@*LE MANS, GP FRANCIA*@
+<div>
+    <div>
+        <div class="title" style="background-color: rgb(41, 41, 41); text-align: left;" >   @*titolo del circuito*@
+            <h3 style="color: white; ">LE MANS, GP FRANCIA</h3>
+        </div>
+        <div style="position: relative;">
+            <img src="/circuit/LE MANS, GP FRANCIA.jpg" width="1116" height="500" alt="LE MANS, GP FRANCIA" class="left" >  @*preleviamo l'immagine del circuito dalla cartella e le diamo la dimensione*@
+            <div style="position: absolute; top: 75%; left: 34%; transform: translate(-50%, -50%); z-index: 1; background-color: rgba(37, 37, 37, 0.74);" class="description"></div>  
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">    @*creaiamo il pulsante dettagli*@
+                            Details
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Descrizione:
+                            Celebre per la classica “24 Ore di Le Mans” automobilistica (ma c’è anche quella motociclistica), il circuito francese è stato modificato
+                            più volte per adeguarsi all’evolversi dei mezzi da gara (auto e moto). È stato inserito nel calendario del Motomondiale per la prima volta
+                            nel 1969, allora il Gran Premio di Francia fu conquistato dal grande Giacomo Agostini su MV Agusta. Il tracciato, dopo il grave incidente
+                            di cui fu vittima il pilota spagnolo Albert Puig, è stato escluso dal calendario dal 1995 fino al 2000. Dello storico tracciato attualmente
+                            viene utilizzato solo il breve rettilineo dei box (450 m), negli anni, soprattutto su richiesta della FIM, il circuito ha subito vari
+                            adattamenti e modifiche per migliorarne la sicurezza. Dopo gli interventi più recenti (effettuati nel 2008) misura 4.185 m, ha 11 curve e
+                            percorrenza in senso orario. La pista è particolarmente stretta, le curve obbligano i piloti a fare brusche frenate e spesso le condizioni
+                            meteorologiche condizionano la gara.  
+                        </div>  <br>
+                        <table class="table table-hover">   @*tabella con relativi dati del circuito*@
+                            <tr>
+                                <th scope="row">Nome</th>
+                                <td>Circuit des "24 Heures du Mans”</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Sede</th>
+                                <td>Le Mans - Francia</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipologia</th>
+                                <td>Permanente</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Edizioni disputate</th>
+                                <td>22</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Giri gara</th>
+                                <td>27</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Lunghezza circuito</th>
+                                <td>4,200 km</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Numero curve</th>
+                                <td>14</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Lunghezza gara</th>
+                                <td>113 km</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>  <br>
+            <div style="align-items: center; background-color: rgba(57, 57, 57, 0.634); text-align : center; color: white; border-radius: 10px">
+            <div>
+                <h5><strong>Purchase</strong></h5>
+            </div>
+                <div>
+                    <label>Hours:</label>
+                    <br>
+                    <input type="number" placeholder="1">
+
+                    <hr>
+                    <label>People Number:</label>
+                    <br>
+                    <input placeholder="2">
+                    <hr>
+                    <label>Price:</label>
+                    <p id="price" aria-placeholder="200€"></p>
+                    <button type="button" class="btn btn-success">Choose</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <div>
+                <img src="/bikes/MvAugustaf4 racing.jpeg" width="175" height="100" alt="MvAugustaf4 racing" class="left">                        @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@  
+                <img src="/bikes/Suzuki GSX-R1000 Racing.jpg" width="175" height="100" alt="Suzuki GSX-R1000 Racing" class="left">      @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikes/Yamaha YZR-M1.jpg" width="175" height="100" alt="Yamaha YZR-M1" class="left">                               @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+
+                <button type="button" class="btn btn-outline-info">Bikes</button>                                                        @*Pulsante Moto*@
+                <button type="button" class="btn btn-outline-warning">Choose this Circuit</button>                                       @*Pulsante Circuito*@
+            </div>
+        </div> <br>
+    </div>
+</div>
+<div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div> <br>
+
+@*MONTMELÒ, GP CATALOGNA*@
+<div>
+    <div>
+        <div class="title" style="background-color: rgb(41, 41, 41); text-align: left;" >   @*titolo del circuito*@
+            <h3 style="color: white; ">MONTMELÒ, GP CATALOGNA</h3>
+        </div>
+        <div style="position: relative;">
+            <img src="/circuit/MONTMELÒ, GP CATALOGNA.jpg" width="1116" height="500" alt="MONTMELÒ, GP CATALOGNA" class="left" >  @*preleviamo l'immagine del circuito dalla cartella e le diamo la dimensione*@
+            <div style="position: absolute; top: 75%; left: 34%; transform: translate(-50%, -50%); z-index: 1; background-color: rgba(37, 37, 37, 0.74);" class="description"></div>  
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">    @*creaiamo il pulsante dettagli*@
+                            Details
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Descrizione:
+                            Il Gran Premio di Catalunya si corre sul circuito del Montmeló, 20 km a nord-est da Barcellona, ed è considerato uno dei migliori impianti
+                            al mondo: costruito nel 1991, un anno prima delle Olimpiadi di Barcellona, è stato poi modificato nel 1995 portando il tracciato alla lunghezza
+                            4.727 m, con 13 curve e un rettilineo, quello dei box, lungo 1.047 m. È presente nel calendario del Motomondiale dal 1996 e ha ospitato alcune
+                            delle gare più spettacolari della MotoGP, una su tutte quella del 2009 con il duello fino all'ultima curva tra Valentino Rossi e Jorge Lorenzo
+                            (vinto poi dal Dottore). Il tracciato è molto tecnico e caratterizzato da brusche frenate, da segnalare soprattutto la prima staccata dopo il
+                            traguardo, è una delle più difficili del mondiale, si passa da 346 km/h a 123 km/h. Questo circuito è considerato uno dei migliori tracciati
+                            dell'ultima generazione e ha ricevuto nel 2001 il premio, attribuito dall’IRTA, come miglior GP dell’anno.  
+                        </div>  <br>
+                        <table class="table table-hover">   @*tabella con relativi dati del circuito*@
+                            <tr>
+                                <th scope="row">Nome</th>
+                                <td>Circuit de Barcelona Catalunya</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Sede</th>
+                                <td>Column contentBarcellona - Spagna</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipologia</th>
+                                <td>Permanente</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Edizioni disputate</th>
+                                <td>22</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Giri gara</th>
+                                <td>23</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Lunghezza circuito</th>
+                                <td>4,600 km</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Numero curve</th>
+                                <td>14</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Lunghezza gara</th>
+                                <td>111,0 km</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>  <br>
+            <div>
+                <img src="/bikes/Aprilia rs racing.jpg" width="175" height="100" alt="Aprilia rs racing" class="left">                      @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+    <img src="/bikes/BMW M 1000 RR.jpeg" width="175" height="100" alt="BMW M 1000 RR" class="left">                             @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+    <img src="/bikes/Ducati Desmosedici 2024.jpeg" width="175" height="100" alt="Ducati Desmosedici 2024" class="left">         @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+
+                <button type="button" class="btn btn-outline-info">Bikes</button>                                                        @*Pulsante Moto*@
+                <button type="button" class="btn btn-outline-warning">Choose this Circuit</button>                                       @*Pulsante Circuito*@
+            </div>
+        </div> <br>
+        <div style="align-items: center; background-color: rgba(57, 57, 57, 0.634); text-align : center; color: white; border-radius: 10px">
+            <div>
+                <h5><strong>Purchase</strong></h5>
+            </div>
+                <div>
+                    <label>Hours:</label>
+                    <br>
+                    <input type="number" placeholder="1">
+
+                    <hr>
+                    <label>People Number:</label>
+                    <br>
+                    <input placeholder="2">
+                    <hr>
+                    <label>Price:</label>
+                    <p id="price" aria-placeholder="200€"></p>
+                    <button type="button" class="btn btn-success">Choose</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <br>
+    </div>
+</div>
+<div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div> <br>
+
+@*MUGELLO, GP ITALIA*@
+<div>
+    <div>
+        <div class="title" style="background-color: rgb(41, 41, 41); text-align: left;" >   @*titolo del circuito*@
+            <h3 style="color: white; ">MUGELLO, GP ITALIA</h3>
+        </div>
+        <div style="position: relative;">
+            <img src="/circuit/MUGELLO, GP ITALIA.jpg" width="1116" height="500" alt="MUGELLO, GP ITALIA" class="left" >  @*preleviamo l'immagine del circuito dalla cartella e le diamo la dimensione*@
+            <div style="position: absolute; top: 75%; left: 34%; transform: translate(-50%, -50%); z-index: 1; background-color: rgba(37, 37, 37, 0.74);" class="description"></div>  
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">    @*creaiamo il pulsante dettagli*@
+                            Details
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Descrizione:
+                            Il circuito del Mugello, inaugurato nel 1974 è la sede storica del Gran Premio d'Italia, acquistato e ristrutturato
+                            da Ferrari nel 1988 è uno dei più spettacolari della MotoGP, conta quindici curve e il rettilineo più lungo del
+                            Motomondiale che permette alle MotoGP di raggiungere i 350 km/h. Tra le curve più severe la San Donato: offre staccate
+                            mozzafiato e spesso indimenticabili sorpassi: ci si arriva dal rettilineo a gas tutto aperto e in poco più di sei
+                            secondi si scende a circa 110 km/h con una decelerazione di 1,5 g, spettacolare anche la curva che porta al rettilineo,
+                            la Bucine, è in discesa e farla bene all’ultimo giro significa avere la vittoria in tasca. Il circuito difficile, molto
+                            tecnico e velocissimo, esalta le qualità del pilota, ma anche quelle del mezzo: serve tanto motore nel lunghissimo
+                            rettilineo e nei tratti in salita, ma anche la ciclistica deve essere perfettamente a punto per la varietà di curve
+                            da affrontare.  
+                        </div>  <br>
+                        <table class="table table-hover">   @*tabella con relativi dati del circuito*@
+                            <tr>
+                                <th scope="row">Nome</th>
+                                <td>Autodromo del Mugello</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Sede</th>
+                                <td>Scarperia (FI) - Italia</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipologia</th>
+                                <td>Column content</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Edizioni disputate</th>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Giri gara</th>
+                                <td>23</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Lunghezza circuito</th>
+                                <td>5,200 Km</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Numero curve</th>
+                                <td>15</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Lunghezza gara</th>
+                                <td>120,6 km</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>  <br>
+            <div style="align-items: center; background-color: rgba(57, 57, 57, 0.634); text-align : center; color: white; border-radius: 10px">
+            <div>
+                <h5><strong>Purchase</strong></h5>
+            </div>
+                <div>
+                    <label>Hours:</label>
+                    <br>
+                    <input type="number" placeholder="1">
+
+                    <hr>
+                    <label>People Number:</label>
+                    <br>
+                    <input placeholder="2">
+                    <hr>
+                    <label>Price:</label>
+                    <p id="price" aria-placeholder="200€"></p>
+                    <button type="button" class="btn btn-success">Choose</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <div>
+                <img src="/bikes/Ducati Gresini racing.jpg" width="175" height="100" alt="Ducati Gresini racing" class="left">                        @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikes/Ducati Pramac.jpeg" width="175" height="100" alt="Ducati Pramac" class="left">      @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikesDucati VR46 Racing Team 2024.jpg" width="175" height="100" alt="Ducati VR46 Racing Team 2024" class="left">                               @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+
+                <button type="button" class="btn btn-outline-info">Bikes</button>                                                        @*Pulsante Moto*@
+                <button type="button" class="btn btn-outline-warning">Choose this Circuit</button>                                       @*Pulsante Circuito*@
+            </div>
+        </div> <br>
+    </div>
+</div>
+<div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div> <br>
+
+@*SOKOL: GP KAZAKISTAN*@
+<div>
+    <div class="title" style="background-color: rgb(41, 41, 41); text-align: left;" >
+        <h3 style="color: white; ">SOKOL: GP KAZAKISTAN</h3>
+    </div>
+    <div class="alert alert-dismissible alert-warning">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <h4 class="alert-heading">Warning!</h4>
+        <p class="mb-0">We're sorry to inform you that the informations are not available for this circuit <a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
+    </div>
+    </div><br>
+</div> <br> <br> <br>
+
+@*ASSEN, GP OLANDA*@
+<div>
+    <div>
+        <div class="title" style="background-color: rgb(41, 41, 41); text-align: left;" >   @*titolo del circuito*@
+            <h3 style="color: white; ">ASSEN, GP OLANDA</h3>
+        </div>
+        <div style="position: relative;">
+            <img src="/circuit/ASSEN, GP OLANDA.jpeg" width="1116" height="500" alt="ASSEN, GP OLANDA" class="left" >  @*preleviamo l'immagine del circuito dalla cartella e le diamo la dimensione*@
+            <div style="position: absolute; top: 75%; left: 34%; transform: translate(-50%, -50%); z-index: 1; background-color: rgba(37, 37, 37, 0.74);" class="description"></div>  
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">    @*creaiamo il pulsante dettagli*@
+                            Details
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Assen è l’unico circuito ad essere stato sempre presente nel calendario sin dalla nascita del Motomondiale (nel 1949).
+                            Per tradizione si è sempre disputato nell’ultimo sabato di giugno, ma dal 2016 il Gran Premio olandese si uniforma a
+                            tutti gli altri andando in scena domenica (sempre l’ultima del mese di giugno). Il tracciato è stretto, con rapidi
+                            cambi di direzione: troviamo 18 curve in tutto, di cui solo tre abbastanza lente, raccordate da brevi rettilinei, il
+                            più lungo dei quali è poco meno di 500 metri. Il tracciato è molto “guidato” e non presenta brusche frenate. L’impianto
+                            è completamente circondato da prati e tribune che consentono un’ottima visuale al pubblico. L’ultima sostanziale
+                            modifica è stata fatta nel 2005, con la riduzione della lunghezza dagli oltre 6.000 m originari agli attuali 4.555 m,
+                            modifiche che però non sono piaciute a piloti e appassionati che ancora rimpiangono le difficoltà del precedente
+                            tracciato (non a caso soprannominato l’università delle due ruote). Su questo circuito hanno vinto tutti i più grandi
+                            campioni del motociclismo, da Giacomo Agostini e Valentino Rossi (6 volte) a Doohan e Hailwood (5 volte).  
+                        </div>  <br>
+                        <table class="table table-hover">   @*tabella con relativi dati del circuito*@
+                            <tr>
+                                <th scope="row">Nome</th>
+                                <td>TT Circuit Assen</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Sede</th>
+                                <td>Assen - Olanda</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipologia</th>
+                                <td>Permanente</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Edizioni disputate</th>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Giri gara</th>
+                                <td>26</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Lunghezza circuito</th>
+                                <td>4,500 km</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Numero curve</th>
+                                <td>18</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Lunghezza gara</th>
+                                <td>118,1 km</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>  <br>
+            <div style="align-items: center; background-color: rgba(57, 57, 57, 0.634); text-align : center; color: white; border-radius: 10px">
+            <div>
+                <h5><strong>Purchase</strong></h5>
+            </div>
+                <div>
+                    <label>Hours:</label>
+                    <br>
+                    <input type="number" placeholder="1">
+
+                    <hr>
+                    <label>People Number:</label>
+                    <br>
+                    <input placeholder="2">
+                    <hr>
+                    <label>Price:</label>
+                    <p id="price" aria-placeholder="200€"></p>
+                    <button type="button" class="btn btn-success">Choose</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <div>
+                <img src="/bikes/Honda rc213v hrc.jpg" width="175" height="100" alt="Honda rc213v hrc" class="left">                        @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@  
+                <img src="/bikes/Honda rc213v motogp lrc.jpeg" width="175" height="100" alt="Honda rc213v motogp lrc" class="left">      @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikes/Honda RC213V racing.jpg" width="175" height="100" alt="Honda RC213V racing" class="left">                               @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+
+                <button type="button" class="btn btn-outline-info">Bikes</button>                                                        @*Pulsante Moto*@
+                <button type="button" class="btn btn-outline-warning">Choose this Circuit</button>                                       @*Pulsante Circuito*@
+            </div>
+        </div> <br>
+    </div>
+</div>
+<div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div> <br>
+
+@*SACHSENRING, GP GERMANIA*@
+<div>
+    <div>
+        <div class="title" style="background-color: rgb(41, 41, 41); text-align: left;" >   @*titolo del circuito*@
+            <h3 style="color: white; ">SACHSENRING, GP GERMANIA</h3>
+        </div>
+        <div style="position: relative;">
+            <img src="/circuit/SACHSENRING, GP GERMANIA.jpeg" width="1116" height="500" alt="SACHSENRING, GP GERMANIA" class="left" >  @*preleviamo l'immagine del circuito dalla cartella e le diamo la dimensione*@
+            <div style="position: absolute; top: 75%; left: 34%; transform: translate(-50%, -50%); z-index: 1; background-color: rgba(37, 37, 37, 0.74);" class="description"></div>  
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">    @*creaiamo il pulsante dettagli*@
+                            Details
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Il circuito del Sachsenring si trova nei pressi del vecchio circuito stradale di Chemnitz, dove si è corso fino agli
+                            anni Novanta, e, con soli 3.671 metri, è il tracciato più corto dell’intero Motomondiale. La pista è stata inaugurata
+                            nel marzo del 1996, ma nel corso degli anni ha subito numerose modifiche, per migliorarne la sicurezza, le ultime
+                            risalgono al 2011. Il Sachsenring  è stretto, si percorre in senso antiorario, ha 14 curve ed è uno dei circuiti più
+                            lenti del Motomondiale. Molto veloce invece il rettilineo del traguardo, è lungo solo 700 metri, ma è in discesa e
+                            porta alla staccata più impegnativa del tracciato: per affrontare la lenta curva Sachsenkurve i piloti devono passare
+                            da 296 km/h a 99 km/h.
+                        </div>  <br>
+                        <table class="table table-hover">   @*tabella con relativi dati del circuito*@
+                            <tr>
+                                <th scope="row">Nome</th>
+                                <td>Sachsenring</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Sede</th>
+                                <td>Chemnitz - Germania</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipologia</th>
+                                <td>Column content</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Edizioni disputate</th>
+                                <td>Permanente</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Giri gara</th>
+                                <td>21</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Lunghezza circuito</th>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Numero curve</th>
+                                <td>3,700 km</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Lunghezza gara</th>
+                                <td>13</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>  <br>
+            <div style="align-items: center; background-color: rgba(57, 57, 57, 0.634); text-align : center; color: white; border-radius: 10px">
+            <div>
+                <h5><strong>Purchase</strong></h5>
+            </div>
+                <div>
+                    <label>Hours:</label>
+                    <br>
+                    <input type="number" placeholder="1">
+
+                    <hr>
+                    <label>People Number:</label>
+                    <br>
+                    <input placeholder="2">
+                    <hr>
+                    <label>Price:</label>
+                    <p id="price" aria-placeholder="200€"></p>
+                    <button type="button" class="btn btn-success">Choose</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <div>
+                <<img src="/bikes/Kawasaki Ninja zx10r.jpg" width="175" height="100" alt="Kawasaki Ninja zx10r" class="left">                        @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@  
+                <img src="/bikes/kawasaki xr10r.jpeg" width="175" height="100" alt="kawasaki xr10r" class="left">      @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikes/KTM-RC16.jpg" width="175" height="100" alt="KTM-RC16" class="left">                               @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+
+                <button type="button" class="btn btn-outline-info">Bikes</button>                                                        @*Pulsante Moto*@
+                <button type="button" class="btn btn-outline-warning">Choose this Circuit</button>                                       @*Pulsante Circuito*@
+            </div>
+        </div> <br>
+    </div>
+</div>
+<div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div> <br>
+
+@*SILVERSTONE, GP GRAN BRETAGNA*@
+<div>
+    <div>
+        <div class="title" style="background-color: rgb(41, 41, 41); text-align: left;" >   @*titolo del circuito*@
+            <h3 style="color: white; ">SILVERSTONE, GP GRAN BRETAGNA</h3>
+        </div>
+        <div style="position: relative;">
+            <img src="/circuit/SILVERSTONE, GP GRAN BRETAGNA.jpg" width="1116" height="500" alt="SILVERSTONE, GP GRAN BRETAGNA" class="left" >  @*preleviamo l'immagine del circuito dalla cartella e le diamo la dimensione*@
+            <div style="position: absolute; top: 75%; left: 34%; transform: translate(-50%, -50%); z-index: 1; background-color: rgba(37, 37, 37, 0.74);" class="description"></div>  
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">    @*creaiamo il pulsante dettagli*@
+                            Details
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Con più di 60 anni di storia, Silverstone è diventato uno dei più prestigiosi circuiti del mondo dei motori.
+                            Completamente rinnovato nelle recenti annate, un investimento multimilionario ha permesso varie migliorie a
+                            partire dal 2010, che hanno reso la pista inglese tra le più veloci del calendario MotoGP. Il ‘Silverstone Wing’,
+                            un pezzo d'arte moderna, una nuova Pit Lane e un nuovo complesso per il paddock completano l'opera.
+                        </div>  <br>
+                        <table class="table table-hover">   @*tabella con relativi dati del circuito*@
+                            <tr>
+                                <th scope="row">Nome</th>
+                                <td>Silverstone Circuit</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Sede</th>
+                                <td>Silverstone, Regno Unito</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipologia</th>
+                                <td>Permanente</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Edizioni disputate</th>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Giri gara</th>
+                                <td>20</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Lunghezza circuito</th>
+                                <td>5,9 Km</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Numero curve</th>
+                                <td>18t</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Lunghezza gara</th>
+                                <td>118 km</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>  <br>
+            <div>
+                <img src="/bikes/Aprilia rs racing.jpg" width="175" height="100" alt="Aprilia rs racing" class="left">                      @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikes/BMW M 1000 RR.jpeg" width="175" height="100" alt="BMW M 1000 RR" class="left">                             @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikes/Ducati Desmosedici 2024.jpeg" width="175" height="100" alt="Ducati Desmosedici 2024" class="left">         @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+
+                <button type="button" class="btn btn-outline-info">Bikes</button>                                                        @*Pulsante Moto*@
+                <button type="button" class="btn btn-outline-warning">Choose this Circuit</button>                                       @*Pulsante Circuito*@
+            </div>
+        </div> <br>
+        <div style="align-items: center; background-color: rgba(57, 57, 57, 0.634); text-align : center; color: white; border-radius: 10px">
+            <div>
+                <h5><strong>Purchase</strong></h5>
+            </div>
+                <div>
+                    <label>Hours:</label>
+                    <br>
+                    <input type="number" placeholder="1">
+
+                    <hr>
+                    <label>People Number:</label>
+                    <br>
+                    <input placeholder="2">
+                    <hr>
+                    <label>Price:</label>
+                    <p id="price" aria-placeholder="200€"></p>
+                    <button type="button" class="btn btn-success">Choose</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <br>
+    </div>
+</div>
+<div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div> <br>
+
+@*RED BULL RING, GP AUSTRIA*@
+<div>
+    <div>
+        <div class="title" style="background-color: rgb(41, 41, 41); text-align: left;" >   @*titolo del circuito*@
+            <h3 style="color: white; ">RED BULL RING, GP AUSTRIA</h3>
+        </div>
+        <div style="position: relative;">
+            <img src="/circuit/RED BULL RING, GP AUSTRIA.jpg" width="1116" height="500" alt="RED BULL RING, GP AUSTRIA" class="left" >  @*preleviamo l'immagine del circuito dalla cartella e le diamo la dimensione*@
+            <div style="position: absolute; top: 75%; left: 34%; transform: translate(-50%, -50%); z-index: 1; background-color: rgba(37, 37, 37, 0.74);" class="description"></div>  
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">    @*creaiamo il pulsante dettagli*@
+                            Details
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Dopo 19 anni di assenza, il circus del Motomondiale ritorna nel 2016 in Austria, sul Red Bull Ring. Il circuito,
+                            costruito negli anni sessanta ed allora chiamato Osterreichring, si trova nei pressi della città di Spilberg ed
+                            è stato oggetto di varie modifiche dal 1996 ad oggi. Chiuso alla fine della stagione 2004, dopo alterne vicende
+                            è stato rilevato dalla Red Bull che, investendo circa 70 milioni di dollari, lo ha completamente ristrutturato
+                            per riaprirlo poi nel 2011, l’appuntamento più importante della stagione è il GP di Formula 1. All'inaugurazione
+                            ufficiale del 15 maggio 2011 si esibirono i due piloti della Red Bull Racing, Sebastian Vettel e Mark Webber, al
+                            volante della RB6. Il circuito è lungo 4.300 m e presenta 8 curve, alcune cieche e altre adatte ai sorpassi e
+                            diversi saliscendi che lo rendono parecchio spettacolare. Prima del Motomondiale le uniche gare motociclistiche
+                            disputate sono state quelle del Campionato Superbike Tedesco.
+                        </div>  <br>
+                        <table class="table table-hover">   @*tabella con relativi dati del circuito*@
+                            <tr>
+                                <th scope="row">Nome</th>
+                                <td>Red Bull Ring</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Sede</th>
+                                <td>Spielberg - Austria</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipologia</th>
+                                <td>Permanente</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Edizioni disputate</th>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Giri gara</th>
+                                <td>28</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Lunghezza circuito</th>
+                                <td>4,300 km</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Numero curve</th>
+                                <td>10</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Lunghezza gara</th>
+                                <td>121.7 km</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>  <br>
+            <div>
+                <img src="/bikes/Ducati Gresini racing.jpg" width="175" height="100" alt="Ducati Gresini racing" class="left">                        @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikes/Ducati Pramac.jpeg" width="175" height="100" alt="Ducati Pramac" class="left">      @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikesDucati VR46 Racing Team 2024.jpg" width="175" height="100" alt="Ducati VR46 Racing Team 2024" class="left">                               @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+
+
+                <button type="button" class="btn btn-outline-info">Bikes</button>                                                        @*Pulsante Moto*@
+                <button type="button" class="btn btn-outline-warning">Choose this Circuit</button>                                       @*Pulsante Circuito*@
+            </div>
+        </div> <br>
+        <div style="align-items: center; background-color: rgba(57, 57, 57, 0.634); text-align : center; color: white; border-radius: 10px">
+            <div>
+                <h5><strong>Purchase</strong></h5>
+            </div>
+                <div>
+                    <label>Hours:</label>
+                    <br>
+                    <input type="number" placeholder="1">
+
+                    <hr>
+                    <label>People Number:</label>
+                    <br>
+                    <input placeholder="2">
+                    <hr>
+                    <label>Price:</label>
+                    <p id="price" aria-placeholder="200€"></p>
+                    <button type="button" class="btn btn-success">Choose</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <br>
+    </div>
+</div>
+<div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div> <br>
+
+@*ARAGON, GP ARAGON*@
+<div>
+    <div>
+        <div class="title" style="background-color: rgb(41, 41, 41); text-align: left;" >   @*titolo del circuito*@
+            <h3 style="color: white; ">ARAGON, GP ARAGON</h3>
+        </div>
+        <div style="position: relative;">
+            <img src="/circuit/ARAGON, GP ARAGON.jpg" width="1116" height="500" alt="ARAGON, GP ARAGON" class="left" >  @*preleviamo l'immagine del circuito dalla cartella e le diamo la dimensione*@
+            <div style="position: absolute; top: 75%; left: 34%; transform: translate(-50%, -50%); z-index: 1; background-color: rgba(37, 37, 37, 0.74);" class="description"></div>  
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">    @*creaiamo il pulsante dettagli*@
+                            Details
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Il Motorland Aragón si trova nei pressi di Alcañiz, località della comunità autonoma spagnola dell'Aragona, è
+                            stato inaugurato nel 2010 ed è l’ultimo arrivato dei quattro tracciati spagnoli che fanno parte Motomondiale
+                            (gli altri sono Jerez, Barcellona e Valencia). Alcañiz  ha una lunga tradizione di gare motociclistiche: ha
+                            ospitato corse stradali dal 1963 fino al 2003, ora la MotoGP corre su un tracciato moderno di 5078 m, con 17
+                            curve e un rettilineo di poco più di 900 metri. La pista è stata disegnata dall'architetto tedesco Hermann
+                            Tilke, è un tracciato abbastanza tecnico, ma poco impegnativo per i freni: la staccata più dura è alla curva 16,
+                            le MotoGp arrivano a 330 km/h e frenano fino a 166 km/h, con una decelerazione di quasi 1,6 g. Molto impegnativa
+                            anche la parte mista, caratterizzata da una sequenza serrata di staccate minori. L'impianto sorge in un'area
+                            isolata e desertica: oltre ad Alcañiz i (piccoli) centri abitati più vicini si trovano a oltre 20 km di distanza.
+                        </div>  <br>
+                        <table class="table table-hover">   @*tabella con relativi dati del circuito*@
+                            <tr>
+                                <th scope="row">Nome</th>
+                                <td>Motor Land Aragon</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Sede</th>
+                                <td>Teruel - Spagna</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipologia</th>
+                                <td>Permanente</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Edizioni disputate</th>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Giri gara</th>
+                                <td>23</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Lunghezza circuito</th>
+                                <td>5,100 km</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Numero curve</th>
+                                <td>17</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Lunghezza gara</th>
+                                <td>116,8 km</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>  <br>
+            <div style="align-items: center; background-color: rgba(57, 57, 57, 0.634); text-align : center; color: white; border-radius: 10px">
+            <div>
+                <h5><strong>Purchase</strong></h5>
+            </div>
+                <div>
+                    <label>Hours:</label>
+                    <br>
+                    <input type="number" placeholder="1">
+
+                    <hr>
+                    <label>People Number:</label>
+                    <br>
+                    <input placeholder="2">
+                    <hr>
+                    <label>Price:</label>
+                    <p id="price" aria-placeholder="200€"></p>
+                    <button type="button" class="btn btn-success">Choose</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <div>
+                <img src="/bikes/Honda rc213v hrc.jpg" width="175" height="100" alt="Honda rc213v hrc" class="left">                        @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@  
+                <img src="/bikes/Honda rc213v motogp lrc.jpeg" width="175" height="100" alt="Honda rc213v motogp lrc" class="left">      @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikes/Honda RC213V racing.jpg" width="175" height="100" alt="Honda RC213V racing" class="left">                               @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+
+                <button type="button" class="btn btn-outline-info">Bikes</button>                                                        @*Pulsante Moto*@
+                <button type="button" class="btn btn-outline-warning">Choose this Circuit</button>                                       @*Pulsante Circuito*@
+            </div>
+        </div> <br>
+    </div>
+</div>
+<div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div> <br>
+
+@*MISANO, GP SAN MARINO*@
+<div>
+    <div>
+        <div class="title" style="background-color: rgb(41, 41, 41); text-align: left;" >   @*titolo del circuito*@
+            <h3 style="color: white; ">MISANO, GP SAN MARINO</h3>
+        </div>
+        <div style="position: relative;">
+            <img src="/circuit/MISANO, GP SAN MARINO.jpeg" width="1116" height="500" alt="MISANO, GP SAN MARINO" class="left" >  @*preleviamo l'immagine del circuito dalla cartella e le diamo la dimensione*@
+            <div style="position: absolute; top: 75%; left: 34%; transform: translate(-50%, -50%); z-index: 1; background-color: rgba(37, 37, 37, 0.74);" class="description"></div>  
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">    @*creaiamo il pulsante dettagli*@
+                            Details
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Il Circuito di Misano Adriatico è stato inaugurato nel 1972 e fino al 1993 ha ospitato i GP d’Italia, alternandosi
+                            con i circuiti di Monza, Imola e Mugello, mentre dal 1985 al 1987 è stato valevole come GP di San Marino. Nel 1993
+                            un grave incidente, al curvone Misano, mise fine alla carriera del campione americano Wayne Rainey che perse l’uso
+                            delle gambe. Da allora il Motomondiale non ha più fatto tappa in Romagna, per rivederlo è stato necessario aspettare
+                            il 2007: grazie a importanti lavori che hanno cambiato il senso di marcia (da antiorario a orario), allungato il
+                            tracciato (ora di 4.226 m) e allargato la sede stradale (misura adesso 14 metri), il Santamonica è tornato nel
+                            Motomondiale. Il tracciato è caratterizzato da quindici curve e tre brevi rettilinei, il più lungo dei quali non
+                            raggiunge i 600 m e grazie ai numerosi cambi di direzione tra curve e varianti, con decelerazioni medie intorno ai
+                            1,3-1,4 g, consente ai piloti di impostare diverse traiettorie che offrono numerose possibilità di sorpasso. Nel 2012
+                            il tracciato è stato intitolato all’indimenticato Marco Simoncelli.
+                        </div>  <br>
+                        <table class="table table-hover">   @*tabella con relativi dati del circuito*@
+                            <tr>
+                                <th scope="row">Nome</th>
+                                <td>Misano World Circuit Marco Simoncelli</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Sede</th>
+                                <td>Misano Adriatico - Italia</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipologia</th>
+                                <td>Permanente</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Edizioni disputate</th>
+                                <td>17</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Giri gara</th>
+                                <td>27</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Lunghezza circuito</th>
+                                <td>4,23 km
+                            </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Numero curve</th>
+                                <td>16</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Lunghezza gara</th>
+                                <td>114,1 km</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>  <br>
+            <div style="align-items: center; background-color: rgba(57, 57, 57, 0.634); text-align : center; color: white; border-radius: 10px">
+            <div>
+                <h5><strong>Purchase</strong></h5>
+            </div>
+                <div>
+                    <label>Hours:</label>
+                    <br>
+                    <input type="number" placeholder="1">
+
+                    <hr>
+                    <label>People Number:</label>
+                    <br>
+                    <input placeholder="2">
+                    <hr>
+                    <label>Price:</label>
+                    <p id="price" aria-placeholder="200€"></p>
+                    <button type="button" class="btn btn-success">Choose</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <div>
+                <img src="/bikes/Kawasaki Ninja zx10r.jpg" width="175" height="100" alt="Kawasaki Ninja zx10r" class="left">                        @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@  
+                <img src="/bikes/kawasaki xr10r.jpeg" width="175" height="100" alt="kawasaki xr10r" class="left">      @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikes/KTM-RC16.jpg" width="175" height="100" alt="KTM-RC16" class="left">                               @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+
+                <button type="button" class="btn btn-outline-info">Bikes</button>                                                        @*Pulsante Moto*@
+                <button type="button" class="btn btn-outline-warning">Choose this Circuit</button>                                       @*Pulsante Circuito*@
+            </div>
+        </div> <br>
+    </div>
+</div>
+<div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div> <br>
+
+@*BUDDH, GP INDIA*@
+<div>
+    <div>
+        <div class="title" style="background-color: rgb(41, 41, 41); text-align: left;" >   @*titolo del circuito*@
+            <h3 style="color: white; ">BUDDH, GP INDIA</h3>
+        </div>
+        <div style="position: relative;">
+            <img src="/circuit/BUDDH, GP INDIA.jpeg" width="1116" height="500" alt="BUDDH, GP INDIA" class="left" >  @*preleviamo l'immagine del circuito dalla cartella e le diamo la dimensione*@
+            <div style="position: absolute; top: 75%; left: 34%; transform: translate(-50%, -50%); z-index: 1; background-color: rgba(37, 37, 37, 0.74);" class="description"></div>  
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">    @*creaiamo il pulsante dettagli*@
+                            Details
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Il quattordicesimo Gran Premio della stagione si terrà quest’anno in India, il 24 settembre, su una pista nuova per il
+                            calendario: il Buddh International Circuit. Organizzato da FairStreet Sports darà il via alla fase asiatica del Mondiale
+                            (a cui faranno seguito altre sei gare fuori Europa). Questo tracciato, che si trova appena fuori dalla città di Greater
+                            Noida (a circa un'ora dalla capitale Nuova Delhi), ha già ospitato alcuni importanti eventi motoristici. La sua costruzione
+                            è iniziata nel 2007, è stata successivamente completata nel 2009 e può ospitare fino a 110.000 spettatori. Lungo 5.137 metri
+                            sono presenti 16 curve, nove a destra e sette a sinistra, e gira in senso orario. È stato progettato dall’ingegnere tedesco,
+                            nonché ex pilota automobilistico, Hermann Tilke. Si tratta dell’esordio assoluto del Paese nel calendario del Mondiale ma
+                            l’India può vantare una lunga tradizione legata alle due ruote: ci sono oltre 170 milioni di moto in circolazione in tutto
+                            il Paese, che corrisponde al 75% dei veicoli utilizzati quotidianamente. È quindi uno dei più grandi mercati motociclistici
+                            del mondo, teatro chiave per l'ulteriore sviluppo e l’espansione della MotoGP. Per i piloti si tratterà di atterrare nella
+                            seconda nazione più popolosa del pianeta e conoscere una pista a tutti completamente sconosciuta.
+                        </div>  <br>
+                        <table class="table table-hover">   @*tabella con relativi dati del circuito*@
+                            <tr>
+                                <th scope="row">Nome</th>
+                                <td>Buddh International Circuit</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Sede</th>
+                                <td>Greater Noida - India</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipologia</th>
+                                <td>Permanente</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Edizioni disputate</th>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Giri gara</th>
+                                <td>24</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Lunghezza circuito</th>
+                                <td>5,01 km</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Numero curve</th>
+                                <td>13</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Lunghezza gara</th>
+                                <td>110,22 km</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>  <br>
+            <div style="align-items: center; background-color: rgba(57, 57, 57, 0.634); text-align : center; color: white; border-radius: 10px">
+            <div>
+                <h5><strong>Purchase</strong></h5>
+            </div>
+                <div>
+                    <label>Hours:</label>
+                    <br>
+                    <input type="number" placeholder="1">
+
+                    <hr>
+                    <label>People Number:</label>
+                    <br>
+                    <input placeholder="2">
+                    <hr>
+                    <label>Price:</label>
+                    <p id="price" aria-placeholder="200€"></p>
+                    <button type="button" class="btn btn-success">Choose</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <div>
+                <img src="/bikes/MvAugustaf4 racing.jpeg" width="175" height="100" alt="MvAugustaf4 racing" class="left">                        @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@  
+                <img src="/bikes/Suzuki GSX-R1000 Racing.jpg" width="175" height="100" alt="Suzuki GSX-R1000 Racing" class="left">      @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikes/Yamaha YZR-M1.jpg" width="175" height="100" alt="Yamaha YZR-M1" class="left">                               @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+
+                <button type="button" class="btn btn-outline-info">Bikes</button>                                                        @*Pulsante Moto*@
+                <button type="button" class="btn btn-outline-warning">Choose this Circuit</button>                                       @*Pulsante Circuito*@
+            </div>
+        </div> <br>
+    </div>
+</div>
+<div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div> <br>
+
+@*MANDALIKA, GP INDONESIA*@
+<div>
+    <div>
+        <div class="title" style="background-color: rgb(41, 41, 41); text-align: left;" >   @*titolo del circuito*@
+            <h3 style="color: white; ">MANDALIKA, GP INDONESIA</h3>
+        </div>
+        <div style="position: relative;">
+            <img src="/circuit/MANDALIKA, GP INDONESIA.jpg" width="1116" height="500" alt="MANDALIKA, GP INDONESIA" class="left" >  @*preleviamo l'immagine del circuito dalla cartella e le diamo la dimensione*@
+            <div style="position: absolute; top: 75%; left: 34%; transform: translate(-50%, -50%); z-index: 1; background-color: rgba(37, 37, 37, 0.74);" class="description"></div>  
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">    @*creaiamo il pulsante dettagli*@
+                            Details
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            È stato inaugurato nel novembre 2021 dalla Superbike, nel 2022 invece è entrato ufficialmente nel calendario della MotoGP.
+                            Si trova sull’isola di Lombok in Indonesia, ed è stato ultimato ad agosto 2021. È lungo 4.310 metri, ha 17 curve, di cui
+                            11 a destra e 6 a sinistra e il rettilineo maggiore misura 507 metri. Conta 40 box nell'area del paddock, 50.000 posti a
+                            sedere in tribuna e 138.000 nell'area della tribuna in piedi.
+                        </div>  <br>
+                        <table class="table table-hover">   @*tabella con relativi dati del circuito*@
+                            <tr>
+                                <th scope="row">Nome</th>
+                                <td>Mandalika International Street Circuit</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Sede</th>
+                                <td>Kuta</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipologia</th>
+                                <td>Permanente</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Edizioni disputate</th>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Giri gara</th>
+                                <td>20</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Lunghezza circuito</th>
+                                <td>4,3 km</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Numero curve</th>
+                                <td>17</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Lunghezza gara</th>
+                                <td>116,13 km</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>  <br>
+            <div style="align-items: center; background-color: rgba(57, 57, 57, 0.634); text-align : center; color: white; border-radius: 10px">
+            <div>
+                <h5><strong>Purchase</strong></h5>
+            </div>
+                <div>
+                    <label>Hours:</label>
+                    <br>
+                    <input type="number" placeholder="1">
+
+                    <hr>
+                    <label>People Number:</label>
+                    <br>
+                    <input placeholder="2">
+                    <hr>
+                    <label>Price:</label>
+                    <p id="price" aria-placeholder="200€"></p>
+                    <button type="button" class="btn btn-success">Choose</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <div>
+                <img src="/bikes/Aprilia rs racing.jpg" width="175" height="100" alt="Aprilia rs racing" class="left">                      @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikes/BMW M 1000 RR.jpeg" width="175" height="100" alt="BMW M 1000 RR" class="left">                             @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikes/Ducati Desmosedici 2024.jpeg" width="175" height="100" alt="Ducati Desmosedici 2024" class="left">         @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+
+                <button type="button" class="btn btn-outline-info">Bikes</button>                                                        @*Pulsante Moto*@
+                <button type="button" class="btn btn-outline-warning">Choose this Circuit</button>                                       @*Pulsante Circuito*@
+            </div>
+        </div> <br>
+    </div>
+</div>
+<div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div> <br>
+
+@*MOTEGI, GP GIAPPONE*@
+<div>
+    <div>
+        <div class="title" style="background-color: rgb(41, 41, 41); text-align: left;" >   @*titolo del circuito*@
+            <h3 style="color: white; ">MOTEGI, GP GIAPPONE</h3>
+        </div>
+        <div style="position: relative;">
+            <img src="/circuit/MOTEGI, GP GIAPPONE.jpg" width="1116" height="500" alt="MOTEGI, GP GIAPPONE" class="left" >  @*preleviamo l'immagine del circuito dalla cartella e le diamo la dimensione*@
+            <div style="position: absolute; top: 75%; left: 34%; transform: translate(-50%, -50%); z-index: 1; background-color: rgba(37, 37, 37, 0.74);" class="description"></div>  
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">    @*creaiamo il pulsante dettagli*@
+                            Details
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Il Twin Ring di Motegi è di proprietà di Honda, nato nel 1997 come pista per i test privati della casa giapponese, si trova
+                            in una zona montuosa a 160 km da Tokyo e ospita dal 1999 il GP del Giappone. Il circuito, abbastanza tortuoso, si sviluppa
+                            su 4800m, conta 14 curve, per lo più lente e un rettilineo lungo poco meno di 800 metri e altri più brevi di raccordo. Si
+                            tratta di un tracciato impegnativo che mette sotto stress i freni: i dischi hanno poco tempo per raffreddarsi tra una
+                            staccata e un'altra. L’impianto è moderno: possiede anche un tracciato ovale di 2,5 km, per le competizioni automobilistiche
+                            “all’americana” e ospita al suo interno il Museo Honda, dove si possono ammirare le moto e le auto da competizione che hanno
+                            fatto la storia della casa.
+                        </div>  <br>
+                        <table class="table table-hover">   @*tabella con relativi dati del circuito*@
+                            <tr>
+                                <th scope="row">Nome</th>
+                                <td>Twin Ring Motegi</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Sede</th>
+                                <td>Motegi - Giappone</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipologia</th>
+                                <td>Permanente</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Edizioni disputate</th>
+                                <td>19</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Giri gara</th>
+                                <td>24</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Lunghezza circuito</th>
+                                <td>4,800 km</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Numero curve</th>
+                                <td>14</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Lunghezza gara</th>
+                                <td>115,2 km</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>  <br>
+            <div style="align-items: center; background-color: rgba(57, 57, 57, 0.634); text-align : center; color: white; border-radius: 10px">
+            <div>
+                <h5><strong>Purchase</strong></h5>
+            </div>
+                <div>
+                    <label>Hours:</label>
+                    <br>
+                    <input type="number" placeholder="1">
+
+                    <hr>
+                    <label>People Number:</label>
+                    <br>
+                    <input placeholder="2">
+                    <hr>
+                    <label>Price:</label>
+                    <p id="price" aria-placeholder="200€"></p>
+                    <button type="button" class="btn btn-success">Choose</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <div>
+                <img src="/bikes/Ducati Gresini racing.jpg" width="175" height="100" alt="Ducati Gresini racing" class="left">                        @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikes/Ducati Pramac.jpeg" width="175" height="100" alt="Ducati Pramac" class="left">      @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikesDucati VR46 Racing Team 2024.jpg" width="175" height="100" alt="Ducati VR46 Racing Team 2024" class="left">                               @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+
+                <button type="button" class="btn btn-outline-info">Bikes</button>                                                        @*Pulsante Moto*@
+                <button type="button" class="btn btn-outline-warning">Choose this Circuit</button>                                       @*Pulsante Circuito*@
+            </div>
+        </div> <br>
+    </div>
+</div>
+<div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div> <br>
+
+@*PHILLIP ISLAND, GP AUSTRALIA*@
+<div>
+    <div>
+        <div class="title" style="background-color: rgb(41, 41, 41); text-align: left;" >   @*titolo del circuito*@
+            <h3 style="color: white; ">PHILLIP ISLAND, GP AUSTRALIA</h3>
+        </div>
+        <div style="position: relative;">
+            <img src="/circuit/PHILLIP ISLAND, GP AUSTRALIA.jpg" width="1116" height="500" alt="PHILLIP ISLAND, GP AUSTRALIA" class="left" >  @*preleviamo l'immagine del circuito dalla cartella e le diamo la dimensione*@
+            <div style="position: absolute; top: 75%; left: 34%; transform: translate(-50%, -50%); z-index: 1; background-color: rgba(37, 37, 37, 0.74);" class="description"></div>  
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">    @*creaiamo il pulsante dettagli*@
+                            Details
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Si trova nella regione Victoria ed è uno del GP più scenografici: la pista si sviluppa su un terreno ondulato e arriva
+                            sul ciglio della scogliera offrendo una meravigliosa vista sull'oceano. Il circuito permane è stato costruito nel 1956,
+                            ma fin dagli anni 20 in questa zona  si disputavano gare automobilistiche, mentre è del 1931 per la prima competizione
+                            motociclistica. Phillip Island cadde in disuso alla fine degli anni '70 e solo nel 1985 vennero avviati i lavori di
+                            restauro e modernizzazione, grazie a un finanziamento statale di 5 milioni di dollari australiani. Il Gran Premio
+                            d'Australia si svolge qui dal 1997, la pista è lunga 4.448 m ed è caratterizzata da un continuo susseguirsi di curve
+                            veloci e di ampio raggio (in tutto sono 12), senza staccate particolarmente insidiose, l’unica degna di nota è quella
+                            della curva 4, si arriva a 270 km/h e si rallenta fino a 110 km/h. L’unico rettilineo, quello dei box, è piuttosto
+                            corto, ma è in discesa e quindi velocissimo. Le temperature rigide e il meteo incerto condizionano spesso lo
+                            svolgimento della gara.
+                        </div>  <br>
+                        <table class="table table-hover">   @*tabella con relativi dati del circuito*@
+                            <tr>
+                                <th scope="row">Nome</th>
+                                <td>Phillip Island Gran Prix Circuit</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Sede</th>
+                                <td>Philip Island - Australia</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipologia</th>
+                                <td>Permanente</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Edizioni disputate</th>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Giri gara</th>
+                                <td>27</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Lunghezza circuito</th>
+                                <td>4,400 km</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Numero curve</th>
+                                <td>12</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Lunghezza gara</th>
+                                <td>120,1 km</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>  <br>
+            <div style="align-items: center; background-color: rgba(57, 57, 57, 0.634); text-align : center; color: white; border-radius: 10px">
+            <div>
+                <h5><strong>Purchase</strong></h5>
+            </div>
+                <div>
+                    <label>Hours:</label>
+                    <br>
+                    <input type="number" placeholder="1">
+
+                    <hr>
+                    <label>People Number:</label>
+                    <br>
+                    <input placeholder="2">
+                    <hr>
+                    <label>Price:</label>
+                    <p id="price" aria-placeholder="200€"></p>
+                    <button type="button" class="btn btn-success">Choose</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <div>
+                <img src="/bikes/Honda rc213v hrc.jpg" width="175" height="100" alt="Honda rc213v hrc" class="left">                        @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@  
+                <img src="/bikes/Honda rc213v motogp lrc.jpeg" width="175" height="100" alt="Honda rc213v motogp lrc" class="left">      @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikes/Honda RC213V racing.jpg" width="175" height="100" alt="Honda RC213V racing" class="left">                               @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+
+                <button type="button" class="btn btn-outline-info">Bikes</button>                                                        @*Pulsante Moto*@
+                <button type="button" class="btn btn-outline-warning">Choose this Circuit</button>                                       @*Pulsante Circuito*@
+            </div>
+        </div> <br>
+    </div>
+</div>
+<div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div> <br>
+
+@*BURIRAM, GP THAILANDIA*@
+<div>
+    <div>
+        <div class="title" style="background-color: rgb(41, 41, 41); text-align: left;" >   @*titolo del circuito*@
+            <h3 style="color: white; ">BURIRAM, GP THAILANDIA</h3>
+        </div>
+        <div style="position: relative;">
+            <img src="/circuit/BURIRAM, GP THAILANDIA.jpg" width="1116" height="500" alt="BURIRAM, GP THAILANDIA" class="left" >  @*preleviamo l'immagine del circuito dalla cartella e le diamo la dimensione*@
+            <div style="position: absolute; top: 75%; left: 34%; transform: translate(-50%, -50%); z-index: 1; background-color: rgba(37, 37, 37, 0.74);" class="description"></div>  
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">    @*creaiamo il pulsante dettagli*@
+                            Details
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Entra a far parte del calendario MotoGp nel 2018, la pista internazionale di Buriram è in Thailandia a 410 km dalla
+                            capitale Bangkok. Costruito nel 2014 e progettato da Hermann Tilke, è il primo circuito tailandese ad aver ottenuto
+                            le licenze FIA Grado 1 e FIM Grado A che lo rendono idoneo per l’organizzazione di competizioni motociclistiche ed
+                            automobilistiche di rilevanza Internazionale. Qui dal 2015 si disputa una prova del mondiale Superbike, che è stata
+                            la prima competizione iridata a disputarsi su questo tracciato.
+                        </div>  <br>
+                        <table class="table table-hover">   @*tabella con relativi dati del circuito*@
+                            <tr>
+                                <th scope="row">Nome</th>
+                                <td>Chang International Circuit</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Sede</th>
+                                <td>Buriram - Thailandia</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipologia</th>
+                                <td>Permanente</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Edizioni disputate</th>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Giri gara</th>
+                                <td>26</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Lunghezza circuito</th>
+                                <td>4,554 km</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Numero curve</th>
+                                <td>12</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Lunghezza gara</th>
+                                <td>118,4 km</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>  <br>
+            <div style="align-items: center; background-color: rgba(57, 57, 57, 0.634); text-align : center; color: white; border-radius: 10px">
+            <div>
+                <h5><strong>Purchase</strong></h5>
+            </div>
+                <div>
+                    <label>Hours:</label>
+                    <br>
+                    <input type="number" placeholder="1">
+
+                    <hr>
+                    <label>People Number:</label>
+                    <br>
+                    <input placeholder="2">
+                    <hr>
+                    <label>Price:</label>
+                    <p id="price" aria-placeholder="200€"></p>
+                    <button type="button" class="btn btn-success">Choose</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <div>
+                <img src="/bikes/Kawasaki Ninja zx10r.jpg" width="175" height="100" alt="Kawasaki Ninja zx10r" class="left">                        @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@  
+                <img src="/bikes/kawasaki xr10r.jpeg" width="175" height="100" alt="kawasaki xr10r" class="left">      @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikes/KTM-RC16.jpg" width="175" height="100" alt="KTM-RC16" class="left">                               @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+
+                <button type="button" class="btn btn-outline-info">Bikes</button>                                                        @*Pulsante Moto*@
+                <button type="button" class="btn btn-outline-warning">Choose this Circuit</button>                                       @*Pulsante Circuito*@
+            </div>
+        </div> <br>
+    </div>
+</div>
+<div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div> <br>
+
+@*SEPANG, GP MALAYSIA*@
+<div>
+    <div>
+        <div class="title" style="background-color: rgb(41, 41, 41); text-align: left;" >   @*titolo del circuito*@
+            <h3 style="color: white; ">SEPANG, GP MALAYSIA</h3>
+        </div>
+        <div style="position: relative;">
+            <img src="/circuit/SEPANG, GP MALAYSIA.jpeg" width="1116" height="500" alt="SEPANG, GP MALAYSIA" class="left" >  @*preleviamo l'immagine del circuito dalla cartella e le diamo la dimensione*@
+            <div style="position: absolute; top: 75%; left: 34%; transform: translate(-50%, -50%); z-index: 1; background-color: rgba(37, 37, 37, 0.74);" class="description"></div>  
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">    @*creaiamo il pulsante dettagli*@
+                            Details
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Tristemente famoso per l’incidente costato la vita a Marco Simoncelli nel 2011, il circuito di Sepang si trova a circa 50 km a
+                            sud della capitale Kuala Lumpur e ospita da sempre il Gran Premio della Malesia. La pista è all’interno di un modernissimo
+                            impianto che comprende hotel, campi da golf, piste di kart e negozi. Il tracciato, lungo 5543 m, è il più largo di tutto il
+                            Motomondiale (25 metri contro una media di circa 15 metri delle altre piste) e consente ai piloti un'ampia scelta di traiettorie.
+                            I due velocissimi rettilinei di 900 metri ciascuno e le 11 curve altrettanto rapide favoriscono i sorpassi, ma ci sono anche
+                            quattro curve piuttosto lente, che richiedono alle moto buone doti di maneggevolezza. Ci sono tante staccate impegnative,
+                            tra cui la prima dopo il traguardo dove si passa da 330 km/h a 90 km/he l'ultima prima del rettilineo di partenza, dove si
+                            arriva a 312 km/h e si riparte a 86 km/h. Da tenere presenti anche le difficoltà ambientali: le elevate temperature e l’alta
+                            percentuale di umidità rendono difficile la vita ai piloti.  
+                        </div>  <br>
+                        <table class="table table-hover">   @*tabella con relativi dati del circuito*@
+                            <tr>
+                                <th scope="row">Nome</th>
+                                <td>Sepang International Circui</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Sede</th>
+                                <td>Sepang - Malesia</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipologia</th>
+                                <td>Permanente</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Edizioni disputate</th>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Giri gara</th>
+                                <td>20</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Lunghezza circuito</th>
+                                <td>5,500 km</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Numero curve</th>
+                                <td>15</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Lunghezza gara</th>
+                                <td>110,9 km</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>  <br>
+            <div style="align-items: center; background-color: rgba(57, 57, 57, 0.634); text-align : center; color: white; border-radius: 10px">
+            <div>
+                <h5><strong>Purchase</strong></h5>
+            </div>
+                <div>
+                    <label>Hours:</label>
+                    <br>
+                    <input type="number" placeholder="1">
+
+                    <hr>
+                    <label>People Number:</label>
+                    <br>
+                    <input type="number" placeholder="2">
+                    <hr>
+                    <label>Price:</label>
+                    <p id="price" aria-placeholder="200€"></p>
+                    <button type="button" class="btn btn-success">Choose</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <div>
+                <img src="/bikes/MvAugustaf4 racing.jpeg" width="175" height="100" alt="MvAugustaf4 racing" class="left">                        @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@  
+                <img src="/bikes/Suzuki GSX-R1000 Racing.jpg" width="175" height="100" alt="Suzuki GSX-R1000 Racing" class="left">      @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikes/Yamaha YZR-M1.jpg" width="175" height="100" alt="Yamaha YZR-M1" class="left">                               @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+
+                <button type="button" class="btn btn-outline-info">Bikes</button>                                                        @*Pulsante Moto*@
+                <button type="button" class="btn btn-outline-warning">Choose this Circuit</button>                                       @*Pulsante Circuito*@
+            </div>
+        </div> <br>
+    </div>
+</div>
+<div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div> <br>
+
+@*VALENCIA, GP COM. VALENCIANA*@
+<div>
+    <div>
+        <div class="title" style="background-color: rgb(41, 41, 41); text-align: left;" >   @*titolo del circuito*@
+            <h3 style="color: white; ">VALENCIA, GP COM. VALENCIANA</h3>
+        </div>
+        <div style="position: relative;">
+            <img src="/circuit/VALENCIA, GP COM. VALENCIANA.jpg" width="1116" height="500" alt="VALENCIA, GP COM. VALENCIANA" class="left" >  @*preleviamo l'immagine del circuito dalla cartella e le diamo la dimensione*@
+            <div style="position: absolute; top: 75%; left: 34%; transform: translate(-50%, -50%); z-index: 1; background-color: rgba(37, 37, 37, 0.74);" class="description"></div>  
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">    @*creaiamo il pulsante dettagli*@
+                            Details
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Il Gran Premio della Comunitat Valenciana è la gara che chiude tradizionalmente la stagione, si corre sul circuito intitolato al pilota
+                            spagnolo Ricardo Tormo, due volte iridato della classe 50 e scomparso nel 1998 per una leucemia. La pista è a Cheste, 20 km dalla città
+                            di Valencia, si percorre in senso antiorario, misura circa 4.000 m ed è formata da brevi rettilinei e quattordici curve piuttosto lente,
+                            che obbligano i piloti a usare le marce basse. Il rettilineo del traguardo è lungo poco meno di 900 m e qui i piloti arrivano a toccare
+                            i 335 km/h. Valencia è una pista stretta con traiettorie “obbligate”: sorpassare è difficile ed è fondamentale partire bene. Grazie alla
+                            configurazione del tracciato i 150.000 spettatori che trovano posto nelle tribune hanno la possibilità di vedere buona parte del tracciato,
+                            godendosi fino in fondo lo spettacolo.
+                        </div>  <br>
+                        <table class="table table-hover">   @*tabella con relativi dati del circuito*@
+                            <tr>
+                                <th scope="row">Nome</th>
+                                <td>Circuit Comunitat Valenciana Ricardo Tormo</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Sede</th>
+                                <td>Cheste (Valencia) - Spagna</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Tipologia</th>
+                                <td>Permanente</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Edizioni disputate</th>
+                                <td>22</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">Giri gara</th>
+                                <td>27</td>
+                            </tr>
+                            <tr class="table-active">
+                                <th scope="row">Lunghezza circuito</th>
+                                <td>4,005 km</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Numero curve</th>
+                                <td>14</td>
+                            </tr>
+                            <tr class="table-warning">
+                                <th scope="row">Lunghezza gara</th>
+                                <td>108,1 km</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>  <br>
+            <div style="align-items: center; background-color: rgba(57, 57, 57, 0.634); text-align : center; color: white; border-radius: 10px">
+            <div>
+                <h5><strong>Purchase</strong></h5>
+            </div>
+                <div>
+                    <label>Hours:</label>
+                    <br>
+                    <input type="number" placeholder="1">
+
+                    <hr>
+                    <label>People Number:</label>
+                    <br>
+                    <input type="number" placeholder="2">
+                    <hr>
+                    <label>Price:</label>
+                    <p id="price" aria-placeholder="200€"></p>
+                    <button type="button" class="btn btn-success">Choose</button>
+                    <br>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <div>
+                <img src="/bikes/Aprilia rs racing.jpg" width="175" height="100" alt="Aprilia rs racing" class="left">                      @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikes/BMW M 1000 RR.jpeg" width="175" height="100" alt="BMW M 1000 RR" class="left">                             @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+                <img src="/bikes/Ducati Desmosedici 2024.jpeg" width="175" height="100" alt="Ducati Desmosedici 2024" class="left">         @*preleviamo l'immagine della moto dalla cartella e le diamo la dimensione*@
+
+                <button type="button" class="btn btn-outline-info">Bikes</button>                                                        @*Pulsante Moto*@
+                <button type="button" class="btn btn-outline-warning">Choose this Circuit</button>                                       @*Pulsante Circuito*@
+            </div>
+        </div> <br>
+    </div>
+</div>
+<div class="progress">
+    <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div> <br>
+</div>

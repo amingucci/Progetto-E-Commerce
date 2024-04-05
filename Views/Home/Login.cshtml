@@ -1,0 +1,43 @@
+@model Login;
+
+@{
+    ViewData["Title"] = "Login";
+}
+<br>
+<h1 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">@ViewData["Title"]</h1>
+
+<div class="text-center">
+    <form class="m-2" method="post" asp-action="Confirm">
+    </form>
+</div>
+
+<style>
+  h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  body
+    {
+      background-image: url('/wallpapers/656804114464499be99c7426d811f2266880d153e26f7b98ca1cab875dfd9b3d.jpg');
+    }
+  
+</style>
+<form class="w-25 mx-auto card p-3" method="post" asp-action="Confirm" style="align-items: center; background-color: rgba(57, 57, 57, 0.634)" >
+        <br>
+        <div class="form-group" >
+            <label asp-for="UserName" style="color: white;">Nickname:</label>
+            <input required asp-for="UserName" class="form-control" type="text"> 
+        </div>
+        <br>
+        <div>
+          <label for="exampleInputPassword1" class="form-label mt-4" style="color: white;">Password:</label>
+          <input required type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="off">
+           </div>
+        <div>
+        <br>
+         <button type="submit" class="btn btn-primary">Login</button>
+</form>

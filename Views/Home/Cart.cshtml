@@ -1,0 +1,69 @@
+@model Prenotation;
+
+
+<style>
+    body{
+        background-image: url('/wallpapers/9425fea1-09f1-45a9-a8f6-7c51fb3aeeb6.jpg')
+    }
+</style>
+
+<div>
+    <h3 style="text-align: center; color: rgb(255, 255, 255); text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);"><strong>Prenotation Recap</strong></h3>
+</div>
+
+<div class="text-center" style="align-items: center; background-color: rgba(57, 57, 57, 0.726); border-radius:10px; color:white ">
+    <div id="circuit">
+        <br>
+        <h6><strong>Your circuit:</strong></h6> 
+        <p>@*Model.ChoosenCircuit*@</p>
+    
+        <ol>
+            <ul>People: @*@Model.PeopleNumber*@</ul>
+            <ul>Hours: @*@Model.OrePrenoted*@</ul>
+            <ul>Date: @*@Model.Date*@</ul>
+        </ol>
+
+        <br>
+        <h6><strong>Circuit Price:</strong></h6>
+        <br>
+        <p>@*@Model.CircuitPrice*@</p>
+
+        <button type="button" class="btn btn-outline-warning">change</button>
+        <button type="button" class="btn btn-outline-danger">Delete</button>
+
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div id="bikes">
+        <label><strong>Your Bikes:</strong></label>
+        <br>
+        <ol>
+            @*@foreach(var b in @Model.ChoosenBikes )
+            {
+                <li>@Model.ChoosenBikes </li>
+            }*@
+        </ol>
+    <div>
+        <h6 id="PTotBikes"><strong>Total bikes price:</strong></h6>
+        <br>
+        <p>@*@Model.PTotMoto*@</p>
+
+        <button type="button" class="btn btn-outline-warning">change</button>
+        <button type="button" class="btn btn-outline-danger">Delete</button>
+    </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div id="TotalBill">
+        <h5><strong>TotalBill:</strong></h5>
+        <br>
+        <p>@*@Model.TotalBill*@</p>
+
+        <button type="button" class="btn btn-success">Confirm Prenotation</button>
+        <button type="button" class="btn btn-danger">Delete Prenotation</button>
+        <br>
+        <br>
+    </div>
+</div>

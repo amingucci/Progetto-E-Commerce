@@ -1,0 +1,67 @@
+@model User; 
+
+@{
+    ViewData["Title"] = "Join our Team!";
+}
+<br>
+<h1 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">@ViewData["Title"]</h1>
+
+
+<title>SignUp</title>
+<style>
+  h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  body {
+    /*background-color: rgb(83, 144, 217);*/
+
+    background-image: url('/wallpapers/b-f_W3005505-superbike-vergleichstest-2019-636909985453710372.jpg');
+  }
+
+</style>
+
+<form class="w-25 mx-auto card p-3" method="post" asp-action="Confirm" style="align-items: center; background-color: rgba(57, 57, 57, 0.719)" >
+        <div class="form-group">
+            <label asp-for="Name" style="color: white;">Your name:</label>
+            <input required asp-for="Name" class="form-control" type="text">
+        </div>
+        <br>
+        <div class="form-group">
+            <label asp-for="Surname" style="color: white;">Your surname:</label>
+            <input required asp-for="Surname" class="form-control" type="text">
+        </div>
+        <br>
+        <div class="form-group">
+            <label asp-for="_Sex" style="color: white;">Your sex:</label>
+            <br>
+            <input type="radio" id="html" name="fav_language" value="Male">
+            <label for="html" style="color: white;">Man</label>
+             <input type="radio" id="html" name="fav_language" value="Female">
+            <label for="html" style="color: white;">Female</label>
+             <input type="radio" id="html" name="fav_language" value="Object">
+            <label for="html" style="color: white;">Grissinbon</label>
+        </div>
+        <br>
+        <div class="form-group" >
+            <label asp-for="UserName" style="color: white;">Nickname:</label>
+            <input required asp-for="UserName" class="form-control" type="text"> 
+        </div>
+        
+        <div>
+          <label for="exampleInputEmail1" class="form-label mt-4" style="color: white;">Email address:</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        
+        <div>
+          <label for="exampleInputPassword1" class="form-label mt-4" style="color: white;">Password:</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="off">
+           </div>
+        <div>
+        <br>
+         <button type="submit" class="btn btn-primary">SignUp</button>
+</form>
